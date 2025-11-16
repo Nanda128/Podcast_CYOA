@@ -1,0 +1,582 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffe5e5;
+}
+
+.game-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffcccc;
+    min-height: 100vh;
+}
+
+.game-card {
+    background: white;
+    border: 2px solid #ff9999;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.health-bar-section {
+    margin-bottom: 20px;
+}
+
+.health-bar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.health-bar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.health-bar-stats {
+    text-align: right;
+}
+
+.health-score {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.health-score.health-good {
+    color: green;
+}
+
+.health-score.health-warning {
+    color: orange;
+}
+
+.health-score.health-critical {
+    color: red;
+}
+
+.health-score-max {
+    color: #666;
+}
+
+.health-status {
+    font-size: 14px;
+    color: #666;
+}
+
+.health-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    height: 20px;
+    border: 1px solid #999;
+}
+
+.health-bar-fill {
+    height: 100%;
+}
+
+.health-bar-fill.health-good {
+    background-color: green;
+}
+
+.health-bar-fill.health-warning {
+    background-color: orange;
+}
+
+.health-bar-fill.health-critical {
+    background-color: red;
+}
+
+.scenario-section {
+    margin-bottom: 20px;
+}
+
+.scenario-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.scenario-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.scenario-counter {
+    font-size: 14px;
+    color: #666;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
+
+.scenario-content {
+    background-color: #fff5f5;
+    border-left: 4px solid #ff6666;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.scenario-situation {
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.scenario-question {
+    font-weight: bold;
+    color: #000000;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-button {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border: 2px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+.option-button:hover {
+    border-color: #ff6666;
+    background-color: #fff5f5;
+}
+
+.option-content {
+    display: flex;
+    gap: 10px;
+}
+
+.option-letter {
+    width: 30px;
+    height: 30px;
+    background-color: #ffcccc;
+    color: #cc0000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ff9999;
+}
+
+.option-button:hover .option-letter {
+    background-color: #ff9999;
+}
+
+.option-text {
+    color: #333;
+    line-height: 1.5;
+}
+
+.option-button:hover .option-text {
+    color: #000000;
+}
+
+.explanation-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid;
+}
+
+.explanation-box.positive {
+    background-color: #f0fff0;
+    border-color: #90ee90;
+}
+
+.explanation-box.warning {
+    background-color: #fffaf0;
+    border-color: #ffd700;
+}
+
+.explanation-box.negative {
+    background-color: #fff5f5;
+    border-color: #ffb3b3;
+}
+
+.explanation-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.explanation-icon {
+    margin-top: 5px;
+}
+
+.explanation-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.explanation-box.positive .explanation-icon {
+    color: green;
+}
+
+.explanation-box.warning .explanation-icon {
+    color: orange;
+}
+
+.explanation-box.negative .explanation-icon {
+    color: red;
+}
+
+.explanation-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.explanation-box.positive .explanation-title {
+    color: green;
+}
+
+.explanation-box.warning .explanation-title {
+    color: orange;
+}
+
+.explanation-box.negative .explanation-title {
+    color: red;
+}
+
+.explanation-choice {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.explanation-reasoning-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.explanation-reasoning {
+    color: #333;
+    line-height: 1.5;
+}
+
+.button-primary {
+    padding: 12px 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background-color: #ff6666;
+    color: white;
+    font-size: 16px;
+}
+
+.button-primary:hover:not(:disabled) {
+    background-color: #ff3333;
+}
+
+.button-primary:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.button-full {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-full:hover {
+    background-color: #ff3333;
+}
+
+.previous-decisions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.previous-decisions-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.previous-decisions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.decision-item {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.decision-scenario {
+    color: #333;
+}
+
+.decision-impact {
+    font-weight: bold;
+}
+
+.decision-impact.positive {
+    color: green;
+}
+
+.decision-impact.warning {
+    color: orange;
+}
+
+.decision-impact.negative {
+    color: red;
+}
+
+.game-over-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.game-over-stats {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.game-over-score {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.game-over-status {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.game-over-correct {
+    font-size: 20px;
+    color: #333;
+}
+
+.alert-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid;
+}
+
+.alert-box.success {
+    background-color: #f0fff0;
+    border-color: #90ee90;
+}
+
+.alert-box.warning {
+    background-color: #fffaf0;
+    border-color: #ffd700;
+}
+
+.alert-box.error {
+    background-color: #fff5f5;
+    border-color: #ffb3b3;
+}
+
+.alert-content {
+    display: flex;
+    gap: 10px;
+}
+
+.alert-icon {
+    margin-top: 5px;
+}
+
+.alert-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.alert-box.success .alert-icon {
+    color: green;
+}
+
+.alert-box.warning .alert-icon {
+    color: orange;
+}
+
+.alert-box.error .alert-icon {
+    color: red;
+}
+
+.alert-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.alert-box.success .alert-title {
+    color: green;
+}
+
+.alert-box.warning .alert-title {
+    color: orange;
+}
+
+.alert-box.error .alert-title {
+    color: red;
+}
+
+.alert-text {
+    line-height: 1.5;
+}
+
+.alert-box.success .alert-text {
+    color: #333;
+}
+
+.alert-box.warning .alert-text {
+    color: #333;
+}
+
+.alert-box.error .alert-text {
+    color: #333;
+}
+
+.journey-summary {
+    margin-bottom: 20px;
+}
+
+.journey-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.journey-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.journey-item {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-left: 4px solid;
+}
+
+.journey-item.correct {
+    border-left-color: green;
+}
+
+.journey-item.warning {
+    border-left-color: orange;
+}
+
+.journey-item.incorrect {
+    border-left-color: red;
+}
+
+.journey-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.journey-item-scenario {
+    font-weight: bold;
+    color: #000000;
+}
+
+.journey-item-impact {
+    font-weight: bold;
+}
+
+.journey-item-impact.positive {
+    color: green;
+}
+
+.journey-item-impact.warning {
+    color: orange;
+}
+
+.journey-item-impact.negative {
+    color: red;
+}
+
+.journey-item-choice {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.journey-item-badge {
+    font-size: 12px;
+    color: green;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.journey-item-badge svg {
+    width: 14px;
+    height: 14px;
+}
+
+.scenario-progress {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.bankruptcy-notice {
+    background-color: #ffdddd;
+    border: 2px solid #ff9999;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.bankruptcy-title {
+    font-weight: bold;
+    color: #cc0000;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.bankruptcy-text {
+    color: #cc0000;
+}
+
+.hidden {
+    display: none;
+}
+
